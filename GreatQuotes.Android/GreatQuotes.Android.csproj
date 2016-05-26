@@ -52,7 +52,6 @@
     <Compile Include="QuoteDetailActivity.cs" />
     <Compile Include="EditQuoteActivity.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="Data\GreatQuote.cs" />
     <Compile Include="Data\QuoteLoader.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -89,14 +88,11 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_new.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\menu\" />
-    <Folder Include="Resources\drawable\" />
-    <Folder Include="Resources\drawable-hdpi\" />
-    <Folder Include="Resources\drawable-ldpi\" />
-    <Folder Include="Resources\drawable-mdpi\" />
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Data\" />
+    <ProjectReference Include="..\GreatQuotes.Data\GreatQuotes.Data.csproj">
+      <Project>{e7082d0b-c540-4050-874d-73e2d06cf71e}</Project>
+      <Name>GreatQuotes.Data</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
